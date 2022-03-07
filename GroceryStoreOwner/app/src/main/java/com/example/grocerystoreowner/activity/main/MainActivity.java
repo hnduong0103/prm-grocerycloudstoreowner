@@ -1,4 +1,4 @@
-package com.example.grocerystoreowner;
+package com.example.grocerystoreowner.activity.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.grocerystoreowner.screenactivities.billactivities.ViewBillActivity;
+import com.example.grocerystoreowner.R;
+import com.example.grocerystoreowner.activity.billactivities.ViewBillActivity;
 
 public class MainActivity extends AppCompatActivity {
 

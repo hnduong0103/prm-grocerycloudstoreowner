@@ -1,4 +1,4 @@
-package com.example.grocerystoreowner.utils;
+package com.example.grocerystoreowner.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

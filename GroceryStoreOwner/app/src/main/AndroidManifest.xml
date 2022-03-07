@@ -13,10 +13,10 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.GroceryStoreOwner">
         <activity
-            android:name=".screenactivities.billactivities.ViewBillActivity"
+            android:name=".activity.billactivities.ViewBillActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
