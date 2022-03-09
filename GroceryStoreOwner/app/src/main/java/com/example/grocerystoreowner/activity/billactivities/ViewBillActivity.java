@@ -67,7 +67,7 @@ public class ViewBillActivity extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                 month = month + 1;
-                String date = day + "-" + month + "-" + year;
+                String date = month + "-" + day + "-" + year;
                 tv_startDate.setText(date);
             }
         };
@@ -87,7 +87,7 @@ public class ViewBillActivity extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                 month = month + 1;
-                String date = day + "-" + month + "-" + year;
+                String date = month + "-" + day + "-" + year;
                 tv_endDate.setText(date);
             }
         };
@@ -109,25 +109,25 @@ public class ViewBillActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<BillResponse> call, Response<BillResponse> response) {
                         Toast.makeText(ViewBillActivity.this, "Call API successfully", Toast.LENGTH_SHORT).show();
-//                        List<String> renderItem = new ArrayList<>();
-//                        ArrayList<BillData> billData = (ArrayList<BillData>) response.body().getData();
-//                        for (int i = 0; i < billData.size(); i++) {
-///*                    renderItem.add(String.valueOf(billData.get(i).getId()));
-//                    renderItem.add(billData.get(i).getCashierName());
-//                    renderItem.add(billData.get(i).getDateCreated());
-//                    renderItem.add(String.valueOf(billData.get(i).getTotalPrice()));
-//                    renderItem.add(" ");*/
-//                            String billTempItem = "";
-//                            billTempItem += (billData.get(i).getId()) + "\n";
-//                            billTempItem += billData.get(i).getCashierName() + "\n";
-//                            billTempItem += billData.get(i).getDateCreated() + "\n";
-//                            billTempItem += billData.get(i).getTotalPrice() + "\n";
-//                            billTempItem += "\n";
-//                            renderItem.add(billTempItem);
-//                        }
-//                        ArrayAdapter<String> adapter =
-//                                new ArrayAdapter<>(ViewBillActivity.this, android.R.layout.simple_list_item_1, renderItem);
-//                        listbill.setAdapter(adapter);
+                        List<String> renderItem = new ArrayList<>();
+                        ArrayList<BillData> billData = (ArrayList<BillData>) response.body().getData();
+                        for (int i = 0; i < billData.size(); i++) {
+/*                    renderItem.add(String.valueOf(billData.get(i).getId()));
+                    renderItem.add(billData.get(i).getCashierName());
+                    renderItem.add(billData.get(i).getDateCreated());
+                    renderItem.add(String.valueOf(billData.get(i).getTotalPrice()));
+                    renderItem.add(" ");*/
+                            String billTempItem = "";
+                            billTempItem += (billData.get(i).getId()) + "\n";
+                            billTempItem += billData.get(i).getCashierName() + "\n";
+                            billTempItem += billData.get(i).getDateCreated() + "\n";
+                            billTempItem += billData.get(i).getTotalPrice() + "\n";
+                            billTempItem += "\n";
+                            renderItem.add(billTempItem);
+                        }
+                        ArrayAdapter<String> adapter =
+                                new ArrayAdapter<>(ViewBillActivity.this, android.R.layout.simple_list_item_1, renderItem);
+                        listbill.setAdapter(adapter);
                     }
 
                     @Override
