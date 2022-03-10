@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.example.grocerystoreowner.R;
 import com.example.grocerystoreowner.activity.billactivities.ViewBillActivity;
+import com.example.grocerystoreowner.activity.login.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +20,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void clickToViewBill(View view) {
         Intent intent = new Intent(this, ViewBillActivity.class);
+        startActivity(intent);
+    }
+
+    public void clickToGoToLogin(View view) {
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 }
