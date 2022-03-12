@@ -6,4 +6,9 @@ public class Constants {
     public static final String BRAND_ID_SHARED_PREFERENCE = "BrandId";
     public static final String GROCERY_CLOUD_SHARED_PREFERENCE = "GroceryCloudSharedPreference";
 
+    public static final String[] PRODUCT_STATUS = {
+            "Đang bán",
+            "Ngừng bán",
+            "Sắp hết hàng"
+    };
 }

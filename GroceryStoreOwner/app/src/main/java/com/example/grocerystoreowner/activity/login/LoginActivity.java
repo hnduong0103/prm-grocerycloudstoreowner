@@ -7,28 +7,16 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.grocerystoreowner.R;
-import com.example.grocerystoreowner.activity.billactivities.ViewBillActivity;
 import com.example.grocerystoreowner.activity.brand.SwitchBrandActivity;
-import com.example.grocerystoreowner.api.LoginAPI;
-import com.example.grocerystoreowner.model.bill.BillData;
-import com.example.grocerystoreowner.model.bill.BillResponse;
 import com.example.grocerystoreowner.model.login.LoginRequest;
 import com.example.grocerystoreowner.model.login.LoginResponse;
-import com.example.grocerystoreowner.service.BillService;
 import com.example.grocerystoreowner.service.LoginService;
 import com.example.grocerystoreowner.util.Constants;
 import com.example.grocerystoreowner.util.SharedPreferenceUtil;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -46,8 +34,8 @@ public class LoginActivity extends AppCompatActivity {
 
     public void clickToLogin(View view) {
         String txtUsername = username.getText().toString();
-        String txPtassword = password.getText().toString();
-        LoginService.getApi().login(new LoginRequest(txtUsername,txPtassword))
+        String txtPassword = password.getText().toString();
+        LoginService.getApi().login(new LoginRequest(txtUsername,txtPassword))
                 .enqueue(new Callback<LoginResponse>() {
                     @Override
                     public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {

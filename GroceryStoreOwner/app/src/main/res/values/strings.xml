@@ -9,4 +9,12 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="product_list_title">Quản lý sản phẩm</string>
+    <string name="product_list_search_hint">Nhập tên sản phẩm hoặc mã sản phẩm 🔍</string>
+    <string name="product_list_search_button">Tìm kiếm</string>
+    <string name="dashboard_title">Quản lý chuỗi cửa hàng tạp hóa</string>
+    <string name="dashboard_bill_button">Hóa đơn</string>
+    <string name="dashboard_product_button">Sản phẩm</string>
+    <string name="dashboard_login_button">Đăng nhập</string>
+    <string name="dashboard_receipt_button">Nhập hàng</string>
 </resources>

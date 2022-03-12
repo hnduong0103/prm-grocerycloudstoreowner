@@ -5,40 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.main.MainActivity">
+    tools:context=".activity.product.ViewProductActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/dashboard_title"
+        android:gravity="center"
+        android:text="@string/product_list_title"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:gravity="center"/>
+        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btProgress"
+    <EditText
+        android:id="@+id/edt_search_term"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/dashboard_bill_button"
-        android:onClick="clickToViewBill"/>
+        android:layout_marginStart="10dp"
+        android:hint="@string/product_list_search_hint"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
 
     <Button
-        android:id="@+id/btProduct"
+        android:id="@+id/btn_search_products"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/dashboard_product_button"
-        android:onClick="clickToViewProducts"/>
+        android:layout_marginTop="50dp"
+        android:text="@string/product_list_search_button" />
 
-    <Button
-        android:id="@+id/btLogin"
+    <Spinner
+        android:id="@+id/categories_spinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/dashboard_login_button"
-        android:onClick="clickToGoToLogin"/>
+        android:layout_height="wrap_content" />
 
-    <Button
+    <ListView
+        android:id="@+id/lv_products"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/dashboard_receipt_button"/>
-
+        android:layout_height="wrap_content"/>
 </LinearLayout>

@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.media.metrics.Event;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,17 +13,12 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.grocerystoreowner.R;
-import com.example.grocerystoreowner.activity.billactivities.ViewBillActivity;
 import com.example.grocerystoreowner.activity.event.EventListActivity;
-import com.example.grocerystoreowner.model.bill.BillData;
-import com.example.grocerystoreowner.model.bill.BillResponse;
 import com.example.grocerystoreowner.model.brand.BrandResponse;
-import com.example.grocerystoreowner.service.BillService;
 import com.example.grocerystoreowner.service.BrandService;
 import com.example.grocerystoreowner.util.Constants;
 import com.example.grocerystoreowner.util.SharedPreferenceUtil;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
