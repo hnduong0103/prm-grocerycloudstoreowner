@@ -1,6 +1,5 @@
-package com.example.grocerystoreowner.activity.billactivities;
+package com.example.grocerystoreowner.activity.bill;
 
-import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,15 +8,11 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.grocerystoreowner.R;
 import com.example.grocerystoreowner.model.bill.BillData;
-import com.example.grocerystoreowner.model.bill.BillDetail;
-import com.example.grocerystoreowner.model.bill.BillResponse;
 import com.google.gson.Gson;
 
-import java.io.Serializable;
 import java.util.List;
 
 public class BillAdapter extends BaseAdapter implements ListAdapter {

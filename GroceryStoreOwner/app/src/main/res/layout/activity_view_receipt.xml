@@ -5,12 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.bill.ViewBillActivity">
-
+    tools:context=".activity.receipt.ViewReceiptActivity">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bill List"
+        android:text="Receipt List"
         android:textSize="20dp"
         android:textStyle="bold"
         android:gravity="center"/>
@@ -83,7 +82,7 @@
     <GridView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/gvBill"
+        android:id="@+id/gvReceipt"
         android:stretchMode="columnWidth"
         android:layout_margin="5dp"/>
 

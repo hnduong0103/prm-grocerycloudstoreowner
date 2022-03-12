@@ -1,4 +1,4 @@
-package com.example.grocerystoreowner.activity.billactivities;
+package com.example.grocerystoreowner.activity.bill;
 
 import androidx.appcompat.app.AppCompatActivity;
 

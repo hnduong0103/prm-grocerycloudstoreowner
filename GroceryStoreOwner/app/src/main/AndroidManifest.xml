@@ -13,7 +13,13 @@
         android:theme="@style/Theme.GroceryStoreOwner"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".activity.billactivities.ViewBillDetailActivity"
+            android:name=".activity.receipt.ViewReceiptDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.receipt.ViewReceiptActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.bill.ViewBillDetailActivity"
             android:exported="false" />
         <activity
             android:name=".activity.event.EventListActivity"
@@ -32,7 +38,7 @@
             android:exported="true"
             android:label="@string/title_activity_login" />
         <activity
-            android:name=".activity.billactivities.ViewBillActivity"
+            android:name=".activity.bill.ViewBillActivity"
             android:exported="false" />
         <activity
             android:name=".activity.main.MainActivity"

@@ -1,31 +1,24 @@
-package com.example.grocerystoreowner.activity.billactivities;
+package com.example.grocerystoreowner.activity.bill;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.GridView;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.grocerystoreowner.R;
-import com.example.grocerystoreowner.activity.login.LoginActivity;
-import com.example.grocerystoreowner.api.BillAPI;
 import com.example.grocerystoreowner.model.bill.BillData;
 import com.example.grocerystoreowner.model.bill.BillResponse;
 import com.example.grocerystoreowner.service.BillService;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
