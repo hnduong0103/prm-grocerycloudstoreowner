@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,7 +34,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class ViewBillActivity extends AppCompatActivity {
-    private ListView listbill;
+    private GridView gvBill;
+    BillAdapter billAdapter = new BillAdapter();
     private Button btnCallAPI;
     private TextView tv_startDate, tv_endDate;
     private EditText edt_storeID;
@@ -44,7 +46,7 @@ public class ViewBillActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_bill);
 
-        listbill = findViewById(R.id.lv_billlist);
+        gvBill = findViewById(R.id.gvBill);
         btnCallAPI = findViewById(R.id.btn_callAPI);
 
         edt_storeID = findViewById(R.id.edt_storeID);
@@ -112,25 +114,9 @@ public class ViewBillActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<BillResponse> call, Response<BillResponse> response) {
                         Toast.makeText(ViewBillActivity.this, "Call API successfully", Toast.LENGTH_SHORT).show();
-                        List<String> renderItem = new ArrayList<>();
-                        ArrayList<BillData> billData = (ArrayList<BillData>) response.body().getData();
-                        for (int i = 0; i < billData.size(); i++) {
-/*                    renderItem.add(String.valueOf(billData.get(i).getId()));
-                    renderItem.add(billData.get(i).getCashierName());
-                    renderItem.add(billData.get(i).getDateCreated());
-                    renderItem.add(String.valueOf(billData.get(i).getTotalPrice()));
-                    renderItem.add(" ");*/
-                            String billTempItem = "";
-                            billTempItem += (billData.get(i).getId()) + "\n";
-                            billTempItem += billData.get(i).getCashierName() + "\n";
-                            billTempItem += billData.get(i).getDateCreated() + "\n";
-                            billTempItem += billData.get(i).getTotalPrice() + "\n";
-                            billTempItem += "\n";
-                            renderItem.add(billTempItem);
-                        }
-                        ArrayAdapter<String> adapter =
-                                new ArrayAdapter<>(ViewBillActivity.this, android.R.layout.simple_list_item_1, renderItem);
-                        listbill.setAdapter(adapter);
+                        List<BillData> billList = response.body().getData();
+                        billAdapter.setBillList(billList);
+                        gvBill.setAdapter(billAdapter);
                     }
 
                     @Override

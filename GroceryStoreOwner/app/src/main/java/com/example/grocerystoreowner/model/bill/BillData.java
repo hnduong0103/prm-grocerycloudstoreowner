@@ -1,5 +1,7 @@
 package com.example.grocerystoreowner.model.bill;
 
+import java.util.List;
+
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,4 +14,5 @@ public class BillData {
     private String cashierName;
     private String dateCreated;
     private int totalPrice;
+    private List<BillDetail> billDetails;
 }

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.GroceryStoreOwner"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activity.billactivities.ViewBillDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.event.EventListActivity"
             android:exported="true" />
         <activity
