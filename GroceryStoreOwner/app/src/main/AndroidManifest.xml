@@ -20,6 +20,8 @@
             android:exported="false" />
         <activity
             android:name=".activity.bill.ViewBillDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.product.DetailProductActivity"
             android:exported="false" />
         <activity
@@ -37,10 +39,6 @@
         <activity
             android:name=".activity.login.LoginActivity"
             android:exported="true" />
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:exported="true"
-            android:label="@string/title_activity_login" />
         <activity
             android:name=".activity.bill.ViewBillActivity"
             android:exported="false" />
