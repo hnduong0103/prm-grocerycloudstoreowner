@@ -17,4 +17,13 @@
     <string name="dashboard_product_button">Sản phẩm</string>
     <string name="dashboard_login_button">Đăng nhập</string>
     <string name="dashboard_receipt_button">Nhập hàng</string>
+    <string name="product_update_title">Cập nhật sản phẩm</string>
+    <string name="product_update_confirm">Xác nhận</string>
+    <string name="product_update_cancel">Hủy</string>
+    <string name="product_update_sku">Mã sản phẩm:</string>
+    <string name="product_update_name">Tên sản phẩm:</string>
+    <string name="product_update_sell_price">Giá bán:</string>
+    <string name="product_update_conversion_rate">Tỉ lệ quy đổi:</string>
+    <string name="product_update_unit_label">Đơn vị tính:</string>
+    <string name="product_update_lower_threshold">Ngưỡng hết hàng:</string>
 </resources>

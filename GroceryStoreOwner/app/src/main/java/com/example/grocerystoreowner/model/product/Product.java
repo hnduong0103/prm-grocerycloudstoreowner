@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 
 import com.example.grocerystoreowner.util.Constants;
 
+import java.io.Serializable;
+
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,7 +13,7 @@ import lombok.Setter;
 @Data
 @Getter
 @Setter
-public class Product {
+public class Product implements Serializable {
     private int id;
     private String name;
     private int unpackedProductId;

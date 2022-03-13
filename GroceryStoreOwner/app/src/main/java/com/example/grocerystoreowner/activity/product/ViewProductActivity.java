@@ -3,6 +3,7 @@ package com.example.grocerystoreowner.activity.product;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -14,9 +15,6 @@ import com.example.grocerystoreowner.R;
 import com.example.grocerystoreowner.model.product.Product;
 import com.example.grocerystoreowner.model.product.ProductResponse;
 import com.example.grocerystoreowner.service.ProductService;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -48,15 +46,16 @@ public class ViewProductActivity extends AppCompatActivity {
                 .enqueue(new Callback<ProductResponse>() {
                     @Override
                     public void onResponse(@NonNull Call<ProductResponse> call, @NonNull Response<ProductResponse> response) {
-                        Toast.makeText(ViewProductActivity.this, "Call API successfully", Toast.LENGTH_SHORT).show();
                         ProductResponse productList = response.body();
                         if (productList != null) {
-                            List<String> renderItem = new ArrayList<>();
-                            for (Product item : productList.getData()) {
-                                renderItem.add(item.toString());
-                            }
-                            ArrayAdapter<String> adapter = new ArrayAdapter<>(ViewProductActivity.this, android.R.layout.simple_list_item_1, renderItem);
+                            ArrayAdapter<Product> adapter = new ArrayAdapter<>(ViewProductActivity.this, android.R.layout.simple_list_item_1, productList.getData());
                             lvProducts.setAdapter(adapter);
+                            lvProducts.setOnItemClickListener((adapterView, view, i, l) -> {
+                                Product product = (Product) lvProducts.getItemAtPosition(i);
+                                Intent intent = new Intent(ViewProductActivity.this, DetailProductActivity.class);
+                                intent.putExtra("product", product);
+                                startActivity(intent);
+                            });
                         }
                     }
 
