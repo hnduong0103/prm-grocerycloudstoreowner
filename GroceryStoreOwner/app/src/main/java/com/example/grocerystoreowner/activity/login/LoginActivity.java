@@ -34,8 +34,8 @@ public class LoginActivity extends AppCompatActivity {
 
     public void clickToLogin(View view) {
         String txtUsername = username.getText().toString();
-        String txPtassword = password.getText().toString();
-        LoginService.getApi().login(new LoginRequest(txtUsername,txPtassword))
+        String txtPassword = password.getText().toString();
+        LoginService.getApi().login(new LoginRequest(txtUsername,txtPassword))
                 .enqueue(new Callback<LoginResponse>() {
                     @Override
                     public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {

@@ -10,8 +10,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Store Owner Management"
-        android:textSize="20dp"
+        android:text="@string/dashboard_title"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:gravity="center"/>
 
@@ -19,20 +19,28 @@
         android:id="@+id/btProgress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bill"
+        android:text="@string/dashboard_bill_button"
         android:onClick="clickToViewBill"/>
+
+    <Button
+        android:id="@+id/btProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dashboard_product_button"
+        android:onClick="clickToViewProducts"/>
+
     <Button
         android:id="@+id/btLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="@string/dashboard_login_button"
         android:onClick="clickToGoToLogin"/>
 
     <Button
         android:id="@+id/btReceipt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Receipt"
+        android:text="@string/dashboard_receipt_button"/>
         android:onClick="clickToGoToReceipt"/>
 
 </LinearLayout>

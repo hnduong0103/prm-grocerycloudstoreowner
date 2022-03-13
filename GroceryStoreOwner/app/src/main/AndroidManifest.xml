@@ -20,6 +20,10 @@
             android:exported="false" />
         <activity
             android:name=".activity.bill.ViewBillDetailActivity"
+            android:name=".activity.product.DetailProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.product.ViewProductActivity"
             android:exported="false" />
         <activity
             android:name=".activity.event.EventListActivity"
