@@ -16,7 +16,7 @@ import lombok.Setter;
 public class Product implements Serializable {
     private int id;
     private String name;
-    private int unpackedProductId;
+    private Integer unpackedProductId;
     private String unpackedProductName;
     private int sellPrice;
     private int categoryId;
@@ -26,6 +26,18 @@ public class Product implements Serializable {
     private int lowerThreshold;
     private int status;
     private String sku;
+
+    public Product(String name, Integer unpackedProductId, int sellPrice, int categoryId, int conversionRate, String unitLabel, int lowerThreshold, int status, String sku) {
+        this.name = name;
+        this.unpackedProductId = unpackedProductId;
+        this.sellPrice = sellPrice;
+        this.categoryId = categoryId;
+        this.conversionRate = conversionRate;
+        this.unitLabel = unitLabel;
+        this.lowerThreshold = lowerThreshold;
+        this.status = status;
+        this.sku = sku;
+    }
 
     @NonNull
     @Override

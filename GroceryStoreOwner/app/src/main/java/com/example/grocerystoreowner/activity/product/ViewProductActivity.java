@@ -35,6 +35,15 @@ public class ViewProductActivity extends AppCompatActivity {
 
         Button btnSearch = findViewById(R.id.btn_search_products);
         btnSearch.setOnClickListener(view -> clickToSearchProducts());
+
+        Button btnCreate = findViewById(R.id.btn_create_product);
+        btnCreate.setOnClickListener(view -> clickToCreateProduct());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        clickToSearchProducts();
     }
 
     public void clickToSearchProducts() {
@@ -56,6 +65,13 @@ public class ViewProductActivity extends AppCompatActivity {
                                 intent.putExtra("product", product);
                                 startActivity(intent);
                             });
+                            lvProducts.setOnItemLongClickListener((adapterView, view, i, l) -> {
+                                Product product = (Product) lvProducts.getItemAtPosition(i);
+                                Intent intent = new Intent(ViewProductActivity.this, DeleteProductActivity.class);
+                                intent.putExtra("product", product);
+                                startActivity(intent);
+                                return true;
+                            });
                         }
                     }
 
@@ -64,5 +80,10 @@ public class ViewProductActivity extends AppCompatActivity {
                         Toast.makeText(ViewProductActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+
+    public void clickToCreateProduct() {
+        Intent intent = new Intent(ViewProductActivity.this, DetailProductActivity.class);
+        startActivity(intent);
     }
 }

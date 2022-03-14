@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
     android:orientation="vertical"
     tools:context=".activity.product.ViewProductActivity">
 
@@ -15,29 +16,37 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/edt_search_term"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:hint="@string/product_list_search_hint"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edt_search_term"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:hint="@string/product_list_search_hint"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/categories_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="43sp" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_search_products"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:text="@string/product_list_search_button" />
 
-    <Spinner
-        android:id="@+id/categories_spinner"
+    <Button
+        android:id="@+id/btn_create_product"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/product_list_create_button" />
 
     <ListView
         android:id="@+id/lv_products"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 </LinearLayout>

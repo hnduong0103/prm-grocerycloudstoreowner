@@ -10,8 +10,9 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="product_list_title">Quản lý sản phẩm</string>
-    <string name="product_list_search_hint">Nhập tên sản phẩm hoặc mã sản phẩm 🔍</string>
+    <string name="product_list_search_hint">Nhập tên hoặc mã sản phẩm 🔍</string>
     <string name="product_list_search_button">Tìm kiếm</string>
+    <string name="product_list_create_button">Tạo mới</string>
     <string name="dashboard_title">Quản lý chuỗi cửa hàng tạp hóa</string>
     <string name="dashboard_bill_button">Hóa đơn</string>
     <string name="dashboard_product_button">Sản phẩm</string>
@@ -26,4 +27,8 @@
     <string name="product_update_conversion_rate">Tỉ lệ quy đổi:</string>
     <string name="product_update_unit_label">Đơn vị tính:</string>
     <string name="product_update_lower_threshold">Ngưỡng hết hàng:</string>
+    <string name="product_update_category">Danh mục:</string>
+    <string name="product_update_unpacked_product">Sản phẩm đơn vị:</string>
+    <string name="product_update_status">Trạng thái:</string>
+    <string name="product_delete_title">Xóa sản phẩm</string>
 </resources>
