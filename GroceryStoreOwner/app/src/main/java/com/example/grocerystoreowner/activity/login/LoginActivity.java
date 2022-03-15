@@ -43,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         SharedPreferences sharedPreferences = getSharedPreferences(Constants.GROCERY_CLOUD_SHARED_PREFERENCE, Context.MODE_PRIVATE);
                         SharedPreferenceUtil.putKey(sharedPreferences, Constants.USER_ID_SHARED_PREFERENCE, new Integer(response.body().getInformation().getId()).toString());
+                        SharedPreferenceUtil.putKey(sharedPreferences, "HasProductToAdd", "0");
 
                         Intent intent = new Intent(LoginActivity.this, SwitchBrandActivity.class);
                         startActivity(intent);

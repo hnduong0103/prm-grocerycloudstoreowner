@@ -62,6 +62,8 @@ public class SwitchBrandActivity extends AppCompatActivity {
                                 SharedPreferenceUtil.putKey(sharedPreferences,
                                         Constants.BRAND_ID_SHARED_PREFERENCE,
                                         new Integer(brand.getId()).toString());
+                                SharedPreferenceUtil.putKey(sharedPreferences, Constants.BRAND_NAME_SHARED_PREFERENCE, brand.getName());
+
                                 Intent intent = new Intent(SwitchBrandActivity.this, EventListActivity.class);
                                 startActivity(intent);
                             }

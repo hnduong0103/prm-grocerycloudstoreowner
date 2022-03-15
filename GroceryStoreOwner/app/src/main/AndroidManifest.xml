@@ -32,6 +32,12 @@
         <activity
             android:name=".activity.bill.ViewBillDetailActivity"
             android:exported="false" />
+             <activity
+            android:name=".activity.event.ProductSearchActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.event.EventDetailActivity"
+            android:exported="true" />
         <activity
             android:name=".activity.event.EventListActivity"
             android:exported="true" />

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.event.EventDetailActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chỉnh sửa thông tin sự kiện"
+        android:textSize="25dp"
+        ></TextView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Sự kiện: "
+            android:textSize="20dp">
+
+        </TextView>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="fdfdfdfdf"
+            android:id="@+id/edtEventName"></EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Thương hiệu: "
+            android:textSize="20dp">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="fdfdfdfdf"
+            android:id="@+id/txtBrand"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Sản phẩm giảm giá: "
+            android:textSize="20dp">
+        </TextView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="20dp"
+            android:id="@+id/addBtn"></Button>
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gridViewProduct"
+        android:layout_width="match_parent"
+        android:layout_height="404dp"
+        android:layout_margin="10dp"
+        android:stretchMode="columnWidth" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="Lưu">
+
+    </Button>
+
+</LinearLayout>

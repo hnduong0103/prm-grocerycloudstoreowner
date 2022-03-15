@@ -4,11 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activity.event.EventListActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Sự kiện đang được áp dụng: "
+        android:textSize="20dp"
+        >
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        >
+
+        <TextView
+            android:id="@+id/applyingEventName"
+            android:layout_width="274dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="..."
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnUnApply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unapply" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Tìm kiếm sự kiện"
+            android:id="@+id/edtSearch"></EditText>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:text="Tìm"
+            android:id="@+id/findBtn"></Button>
+    </RelativeLayout>
+
     <GridView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/gridViewEvent"
         android:stretchMode="columnWidth"
-        android:layout_margin="5dp"/>
+        android:layout_margin="10dp"/>
 </LinearLayout>

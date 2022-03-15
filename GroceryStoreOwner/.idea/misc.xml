@@ -28,12 +28,16 @@
         <entry key="..\:/Users/quan6/OneDrive/SGK/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/quan6/OneDrive/SGK/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout-w936dp/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/quan6/OneDrive/SGK/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_brand.xml" value="0.16979166666666667" />
-        <entry key="..\:/Users/quan6/OneDrive/SGK/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_event_list.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/quan6/OneDrive/SGK/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_event_detail.xml" value="0.264" />
+        <entry key="..\:/Users/quan6/OneDrive/SGK/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_event_list.xml" value="0.264" />
         <entry key="..\:/Users/quan6/OneDrive/SGK/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/quan6/OneDrive/SGK/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_main.xml" value="0.10677083333333333" />
+        <entry key="..\:/Users/quan6/OneDrive/SGK/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_product_search.xml" value="0.17760416666666667" />
         <entry key="..\:/Users/quan6/OneDrive/SGK/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_switch_brand.xml" value="0.264" />
         <entry key="..\:/Users/quan6/OneDrive/SGK/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_view_bill.xml" value="0.1" />
         <entry key="..\:/Users/quan6/OneDrive/SGK/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/event_grid_item.xml" value="0.264" />
+        <entry key="..\:/Users/quan6/OneDrive/SGK/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/product_for_event_search_grid_item.xml" value="0.264" />
+        <entry key="..\:/Users/quan6/OneDrive/SGK/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/product_in_event_grid_item.xml" value="0.4" />
       </map>
     </option>
   </component>

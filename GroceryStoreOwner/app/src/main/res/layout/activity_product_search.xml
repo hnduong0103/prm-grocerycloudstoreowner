@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.event.ProductSearchActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Tìm kiếm sản phẩm">
+    </TextView>
+    <EditText
+        android:id="@+id/edtSearchTerm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="tên sản phẩm"></EditText>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Tìm"
+        android:id="@+id/btnSearch">
+
+    </Button>
+
+    <GridView
+        android:id="@+id/productGridView"
+        android:layout_width="match_parent"
+        android:layout_height="449dp"></GridView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tổng số kết quả: "
+            android:textSize="20dp"
+            ></TextView>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:id="@+id/totalResult"></EditText>
+    </LinearLayout>
+
+</LinearLayout>
