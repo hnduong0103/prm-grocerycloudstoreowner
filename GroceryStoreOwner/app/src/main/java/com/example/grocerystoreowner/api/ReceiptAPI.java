@@ -11,5 +11,6 @@ public interface ReceiptAPI {
     @GET("api/v1.0/receipts")
     Call<ReceiptResponse> getReceiptList(@Query("store-id") int storeId,
                                         @Query("start-date") String startDate,
-                                        @Query("end-date") String endDate);
+                                        @Query("end-date") String endDate,
+                                         @Query("page-size") int pagesize);
 }

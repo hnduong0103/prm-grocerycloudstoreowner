@@ -35,4 +35,11 @@
         android:text="Receipt"
         android:onClick="clickToGoToReceipt"/>
 
+    <Button
+        android:id="@+id/btInventory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Inventory"
+        android:onClick="clickToGoToInventory"/>
+
 </LinearLayout>

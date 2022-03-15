@@ -102,7 +102,7 @@ public class ViewBillActivity extends AppCompatActivity {
         int storeID = Integer.parseInt(edt_storeID.getText().toString());
         String startDate = tv_startDate.getText().toString();
         String endDate = tv_endDate.getText().toString();
-        BillService.getApi().getBillList(storeID, startDate, endDate)
+        BillService.getApi().getBillList(storeID, startDate, endDate, 100)
                 .enqueue(new Callback<BillResponse>() {
                     @Override
                     public void onResponse(Call<BillResponse> call, Response<BillResponse> response) {

@@ -100,7 +100,7 @@ public class ViewReceiptActivity extends AppCompatActivity {
         int storeID = Integer.parseInt(edt_storeID.getText().toString());
         String startDate = tv_startDate.getText().toString();
         String endDate = tv_endDate.getText().toString();
-        ReceiptService.getApi().getReceiptList(storeID, startDate, endDate)
+        ReceiptService.getApi().getReceiptList(storeID, startDate, endDate, 100)
                 .enqueue(new Callback<ReceiptResponse>() {
                     @Override
                     public void onResponse(Call<ReceiptResponse> call, Response<ReceiptResponse> response) {

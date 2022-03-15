@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.example.grocerystoreowner.R;
 import com.example.grocerystoreowner.activity.bill.ViewBillActivity;
+import com.example.grocerystoreowner.activity.inventory.ViewInventoryActivity;
 import com.example.grocerystoreowner.activity.login.LoginActivity;
 import com.example.grocerystoreowner.activity.receipt.ViewReceiptActivity;
 
@@ -31,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void clickToGoToReceipt(View view) {
         Intent intent = new Intent(this, ViewReceiptActivity.class);
+        startActivity(intent);
+    }
+
+    public void clickToGoToInventory(View view) {
+        Intent intent = new Intent(this, ViewInventoryActivity.class);
         startActivity(intent);
     }
 }
