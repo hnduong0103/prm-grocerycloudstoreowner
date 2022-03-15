@@ -19,6 +19,10 @@ public interface EventAPI {
                                          @Query("page-index") int pageIndex,
                                          @Query("page-size") int pageSize
                                          );
+    @GET("api/v1.0/events/{id}")
+    Call<EventResponse> getEventById(@Path("id") int eventId,@Query("brand-id") int brandId
+
+    );
     @GET("api/v1.0/events")
     Call<EventResponseList> getEventBasedOnStatus(@Query("brand-id") int brandId,
                                                     @Query("search-term") String searchTerm,

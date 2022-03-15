@@ -11,8 +11,7 @@
         android:layout_width="310dp"
         android:layout_height="46dp"
         android:text="Event sf ks djf ls sld fkj lsk jfs dsdf sfsdf è sf sf sf "
-        android:textSize="18sp"
-       />
+        android:textSize="18sp" />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -1,6 +1,7 @@
 package com.example.grocerystoreowner.activity.event;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.grocerystoreowner.R;
+import com.example.grocerystoreowner.activity.brand.SwitchBrandActivity;
+import com.example.grocerystoreowner.activity.login.LoginActivity;
 import com.example.grocerystoreowner.model.event.EventResponse;
 import com.example.grocerystoreowner.model.event.EventStatusPutRequest;
 import com.example.grocerystoreowner.service.EventService;
@@ -59,7 +62,16 @@ public class EventAdapter extends BaseAdapter implements ListAdapter {
         TextView eventName = view.findViewById(R.id.eventName);
         EventResponse event = _eventList.get(i);
         eventName.setText(event.getEventName());
+        eventName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //start activity và truyền vào id
+                Intent intent = new Intent(view.getContext(), EventDetailActivity.class);
+                intent.putExtra("EventId", event.getId());
+                view.getContext().startActivity(intent);
 
+            }
+        });
         Button applyBtn = view.findViewById(R.id.btnApply);
         applyBtn.setEnabled(event.getStatus()==1);
         applyBtn.setOnClickListener(new View.OnClickListener() {
