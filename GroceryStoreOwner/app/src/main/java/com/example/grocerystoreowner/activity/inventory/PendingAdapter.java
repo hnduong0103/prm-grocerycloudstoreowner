@@ -25,9 +25,10 @@ import java.util.List;
 
 public class PendingAdapter extends BaseAdapter implements ListAdapter {
     private List<PendingItem> _pendinglist;
-
+    List<PendingItem> pendingList = DataLocalManager.getPendingList();
     public void setPendingList(List<PendingItem> _pendinglist){
         this._pendinglist = _pendinglist;
+        notifyDataSetChanged();
     }
 
     @Override
@@ -56,8 +57,8 @@ public class PendingAdapter extends BaseAdapter implements ListAdapter {
         EditText quantity = view.findViewById(R.id.Quantity);
         EditText buyprice = view.findViewById(R.id.Price);
         Button btDelete = view.findViewById(R.id.btDelete);
-        List<PendingItem> pendingList = DataLocalManager.getPendingList();
-        PendingItem item = pendingList.get(i);
+        _pendinglist = pendingList;
+        PendingItem item = _pendinglist.get(i);
         productName.setText(item.getProductName());
         quantity.setText(String.valueOf(item.getQuantity()));
         buyprice.setText(String.valueOf(item.getBuyPrice()));
@@ -65,53 +66,41 @@ public class PendingAdapter extends BaseAdapter implements ListAdapter {
             @Override
             public void onClick(View view) {
                 Toast.makeText(view.getContext(),"Remove "+pendingList.get(i).getProductName(), Toast.LENGTH_SHORT).show();
-                pendingList.remove(i);
-                DataLocalManager.setPendingList(pendingList);
+                _pendinglist.remove(i);
+                DataLocalManager.setPendingList(_pendinglist);
                 Intent intent = new Intent(view.getContext(), ViewPendingList.class);
                 view.getContext().startActivity(intent);
             }
         });
-        buyprice.addTextChangedListener(new TextWatcher() {
+
+        buyprice.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                int index = getIndexOf(item.getProductId());
-                pendingList.get(index).setBuyPrice(Integer.parseInt(buyprice.getText().toString()));
-                DataLocalManager.setPendingList(pendingList);
+            public void onFocusChange(View view, boolean hasFocus) {
+                if (!hasFocus) {
+                    int index = getIndexOf(item.getProductId());
+                    _pendinglist.get(index).setBuyPrice(Integer.parseInt(buyprice.getText().toString()));
+                    notifyDataSetChanged();
+                    DataLocalManager.setPendingList(_pendinglist);
+                }
             }
         });
-        quantity.addTextChangedListener(new TextWatcher() {
+
+        quantity.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                int index = getIndexOf(item.getProductId());
-                pendingList.get(index).setQuantity(Integer.parseInt(quantity.getText().toString()));
-                DataLocalManager.setPendingList(pendingList);
+            public void onFocusChange(View view, boolean hasFocus) {
+                if (!hasFocus) {
+                    int index = getIndexOf(item.getProductId());
+                    _pendinglist.get(index).setQuantity(Integer.parseInt(quantity.getText().toString()));
+                    notifyDataSetChanged();
+                    DataLocalManager.setPendingList(_pendinglist);
+                }
             }
         });
         return view;
     }
 
     private int getIndexOf(int id){
-        List<PendingItem> pendingList = DataLocalManager.getPendingList();
+        List<PendingItem> pendingList = _pendinglist;
         for (int i = 0; i<pendingList.size(); i++){
             if (pendingList.get(i).getProductId() == id){
                 return i;

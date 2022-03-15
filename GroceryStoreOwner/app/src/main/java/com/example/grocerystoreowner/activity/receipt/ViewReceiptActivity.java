@@ -3,6 +3,8 @@ package com.example.grocerystoreowner.activity.receipt;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -18,6 +20,7 @@ import com.example.grocerystoreowner.R;
 import com.example.grocerystoreowner.model.receipt.ReceiptData;
 import com.example.grocerystoreowner.model.receipt.ReceiptResponse;
 import com.example.grocerystoreowner.service.ReceiptService;
+import com.example.grocerystoreowner.util.Constants;
 
 import java.util.Calendar;
 import java.util.List;
@@ -31,7 +34,6 @@ public class ViewReceiptActivity extends AppCompatActivity {
     ReceiptAdapter receiptAdapter = new ReceiptAdapter();
     private Button btnCallAPI;
     private TextView tv_startDate, tv_endDate;
-    private EditText edt_storeID;
     DatePickerDialog.OnDateSetListener setListenerStartDate, setListenerEndDate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +43,6 @@ public class ViewReceiptActivity extends AppCompatActivity {
         gvReceipt = findViewById(R.id.gvReceipt);
         btnCallAPI = findViewById(R.id.btn_callAPI);
 
-        edt_storeID = findViewById(R.id.edt_storeID);
         tv_startDate = findViewById(R.id.tv_startDate);
         tv_endDate = findViewById(R.id.tv_endDate);
 
@@ -97,7 +98,8 @@ public class ViewReceiptActivity extends AppCompatActivity {
         });
     }
     public void clickToCallAPI() {
-        int storeID = Integer.parseInt(edt_storeID.getText().toString());
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.GROCERY_CLOUD_SHARED_PREFERENCE, Context.MODE_PRIVATE);
+        Integer storeID = Integer.parseInt(sharedPreferences.getString(Constants.STORE_ID_SHARED_PREFERENCE,null));
         String startDate = tv_startDate.getText().toString();
         String endDate = tv_endDate.getText().toString();
         ReceiptService.getApi().getReceiptList(storeID, startDate, endDate, 100)

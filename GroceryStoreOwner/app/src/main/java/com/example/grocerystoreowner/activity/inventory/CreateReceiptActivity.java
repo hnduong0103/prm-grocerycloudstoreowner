@@ -2,6 +2,8 @@ package com.example.grocerystoreowner.activity.inventory;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +17,7 @@ import com.example.grocerystoreowner.model.pendingitem.PendingItem;
 import com.example.grocerystoreowner.model.receipt.ReceiptCreate;
 import com.example.grocerystoreowner.model.receipt.ReceiptCreateItem;
 import com.example.grocerystoreowner.service.ReceiptService;
+import com.example.grocerystoreowner.util.Constants;
 import com.example.grocerystoreowner.util.DataLocalManager;
 
 import java.util.ArrayList;
@@ -45,7 +48,8 @@ public class CreateReceiptActivity extends AppCompatActivity {
     }
 
     public void clickToCallAPI() {
-        int storeId = 1;
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.GROCERY_CLOUD_SHARED_PREFERENCE, Context.MODE_PRIVATE);
+        Integer storeId = Integer.parseInt(sharedPreferences.getString(Constants.STORE_ID_SHARED_PREFERENCE,null));
         List<PendingItem> pendingList = DataLocalManager.getPendingList();
         List<ReceiptCreateItem> createItems = new ArrayList<>();
         int totalCost = 0;
@@ -67,12 +71,16 @@ public class CreateReceiptActivity extends AppCompatActivity {
                     public void onResponse(Call<ReceiptCreate> call, Response<ReceiptCreate> response) {
                         if (response.code() == 200){
                             Toast.makeText(CreateReceiptActivity.this, "Create Receipt Successfully", Toast.LENGTH_SHORT).show();
+                            //DataLocalManager.setPendingList(null);
+                            finish();
                         }
                     }
 
                     @Override
                     public void onFailure(Call<ReceiptCreate> call, Throwable t) {
                         Toast.makeText(CreateReceiptActivity.this, "Create Receipt Successfully", Toast.LENGTH_SHORT).show();
+                        List<PendingItem> emptyList = new ArrayList<>();
+                        DataLocalManager.setPendingList(emptyList);
                         finish();
                     }
                 });

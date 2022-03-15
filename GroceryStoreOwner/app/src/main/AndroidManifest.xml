@@ -13,8 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GroceryStoreOwner"
         android:usesCleartextTraffic="true">
-        
-              <activity
+        <activity
+            android:name=".activity.store.SwitchStoreActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.inventory.CreateReceiptActivity"
             android:exported="false" />
         <activity
@@ -23,8 +25,8 @@
             android:noHistory="true" />
         <activity
             android:name=".activity.inventory.ViewInventoryActivity"
-             android:exported="false" />
-            <activity
+            android:exported="false" />
+        <activity
             android:name=".activity.cashier.DeleteCashierActivity"
             android:exported="false" />
         <activity
@@ -45,7 +47,7 @@
         <activity
             android:name=".activity.bill.ViewBillDetailActivity"
             android:exported="false" />
-             <activity
+        <activity
             android:name=".activity.event.ProductSearchActivity"
             android:exported="true" />
         <activity
@@ -68,22 +70,19 @@
             android:exported="true" />
         <activity
             android:name=".activity.login.LoginActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".activity.bill.ViewBillActivity"
             android:exported="false" />
         <activity
             android:name=".activity.main.MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

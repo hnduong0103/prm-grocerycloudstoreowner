@@ -14,6 +14,7 @@ import com.example.grocerystoreowner.activity.cashier.ViewCashierActivity;
 import com.example.grocerystoreowner.activity.login.LoginActivity;
 import com.example.grocerystoreowner.activity.receipt.ViewReceiptActivity;
 import com.example.grocerystoreowner.activity.product.ViewProductActivity;
+import com.example.grocerystoreowner.activity.store.SwitchStoreActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickToViewBill(View view) {
-        Intent intent = new Intent(this, ViewBillActivity.class);
+        Intent intent = new Intent(this, SwitchStoreActivity.class);
+        intent.putExtra("action", 1);
         startActivity(intent);
     }
 
@@ -34,12 +36,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickToGoToReceipt(View view) {
-        Intent intent = new Intent(this, ViewReceiptActivity.class);
+        Intent intent = new Intent(this, SwitchStoreActivity.class);
+        intent.putExtra("action", 2);
         startActivity(intent);
     }
 
     public void clickToGoToInventory(View view) {
-        Intent intent = new Intent(this, ViewInventoryActivity.class);
+        Intent intent = new Intent(this, SwitchStoreActivity.class);
+        intent.putExtra("action", 3);
         startActivity(intent);
         }
     public void clickToViewProducts(View view) {

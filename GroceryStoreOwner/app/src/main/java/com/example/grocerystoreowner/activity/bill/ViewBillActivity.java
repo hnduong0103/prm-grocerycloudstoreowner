@@ -3,6 +3,8 @@ package com.example.grocerystoreowner.activity.bill;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -18,6 +20,7 @@ import com.example.grocerystoreowner.R;
 import com.example.grocerystoreowner.model.bill.BillData;
 import com.example.grocerystoreowner.model.bill.BillResponse;
 import com.example.grocerystoreowner.service.BillService;
+import com.example.grocerystoreowner.util.Constants;
 
 import java.util.Calendar;
 import java.util.List;
@@ -31,7 +34,6 @@ public class ViewBillActivity extends AppCompatActivity {
     BillAdapter billAdapter = new BillAdapter();
     private Button btnCallAPI;
     private TextView tv_startDate, tv_endDate;
-    private EditText edt_storeID;
     DatePickerDialog.OnDateSetListener setListenerStartDate, setListenerEndDate;
 
     @Override
@@ -42,7 +44,6 @@ public class ViewBillActivity extends AppCompatActivity {
         gvBill = findViewById(R.id.gvBill);
         btnCallAPI = findViewById(R.id.btn_callAPI);
 
-        edt_storeID = findViewById(R.id.edt_storeID);
         tv_startDate = findViewById(R.id.tv_startDate);
         tv_endDate = findViewById(R.id.tv_endDate);
 
@@ -99,7 +100,8 @@ public class ViewBillActivity extends AppCompatActivity {
     }
 
     public void clickToCallAPI() {
-        int storeID = Integer.parseInt(edt_storeID.getText().toString());
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.GROCERY_CLOUD_SHARED_PREFERENCE, Context.MODE_PRIVATE);
+        Integer storeID = Integer.parseInt(sharedPreferences.getString(Constants.STORE_ID_SHARED_PREFERENCE,null));
         String startDate = tv_startDate.getText().toString();
         String endDate = tv_endDate.getText().toString();
         BillService.getApi().getBillList(storeID, startDate, endDate, 100)

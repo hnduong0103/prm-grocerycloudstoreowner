@@ -38,9 +38,9 @@ public class ViewInventoryActivity extends AppCompatActivity {
         gvInventory = findViewById(R.id.gvInventory);
         SharedPreferences sharedPreferences = getSharedPreferences(Constants.GROCERY_CLOUD_SHARED_PREFERENCE, Context.MODE_PRIVATE);
         Integer brandId = Integer.parseInt(sharedPreferences.getString(Constants.BRAND_ID_SHARED_PREFERENCE,null));
-        int storeid = 1;
+        Integer storeId = Integer.parseInt(sharedPreferences.getString(Constants.STORE_ID_SHARED_PREFERENCE,null));
         String searchTerm = "";
-        StockService.getApi().getStock(brandId, storeid, searchTerm, 100)
+        StockService.getApi().getStock(brandId, storeId, searchTerm, 100)
                 .enqueue(new Callback<StockResponse>() {
                     @Override
                     public void onResponse(Call<StockResponse> call, Response<StockResponse> response) {
@@ -49,7 +49,6 @@ public class ViewInventoryActivity extends AppCompatActivity {
                         inventoryAdapter.setProductList(stockDataList);
                         gvInventory.setAdapter(inventoryAdapter);
                     }
-
                     @Override
                     public void onFailure(Call<StockResponse> call, Throwable t) {
                         Toast.makeText(ViewInventoryActivity.this, "Call API failed", Toast.LENGTH_SHORT).show();

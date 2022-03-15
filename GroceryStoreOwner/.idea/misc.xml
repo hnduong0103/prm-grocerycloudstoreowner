@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/activity_brand.xml" value="0.25416666666666665" />
+        <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/activity_create_receipt.xml" value="0.25416666666666665" />
+        <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/activity_delete_cashier.xml" value="0.25416666666666665" />
+        <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/activity_switch_brand.xml" value="0.25416666666666665" />
+        <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/activity_switch_store.xml" value="0.25416666666666665" />
+        <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/activity_view_bill.xml" value="0.25416666666666665" />
+        <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/activity_view_receipt.xml" value="0.25416666666666665" />
+        <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/bill_grid_item.xml" value="0.190625" />
+        <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/receipt_grid_item.xml" value="0.190625" />
         <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_view_bill.xml" value="0.25" />
         <entry key="..\:/Users/ROG STRIX/AndroidStudioProjects/GroceryStoreOwner/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
