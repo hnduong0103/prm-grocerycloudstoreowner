@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:layout_marginVertical="10sp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/product_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Banh ngot Luu Hung"
+            android:textColor="#873c1e"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/product_item_sku"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MK2948"
+            android:textColor="#a06b39"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/product_item_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Banh ngot"
+            android:textColor="#c97f5d"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="260dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/product_item_sell_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2,400,000đ"
+            android:textColor="#025b0e"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/product_item_unit_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chai"
+            android:textColor="#586640"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/product_item_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đang bán"
+            android:textColor="#9db802"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>

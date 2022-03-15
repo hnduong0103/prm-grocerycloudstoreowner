@@ -5,13 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.grocerystoreowner.R;
+import com.example.grocerystoreowner.adapter.ProductAdapter;
 import com.example.grocerystoreowner.model.product.Product;
 import com.example.grocerystoreowner.model.product.ProductResponse;
 import com.example.grocerystoreowner.service.ProductService;
@@ -57,14 +57,17 @@ public class ViewProductActivity extends AppCompatActivity {
                     public void onResponse(@NonNull Call<ProductResponse> call, @NonNull Response<ProductResponse> response) {
                         ProductResponse productList = response.body();
                         if (productList != null) {
-                            ArrayAdapter<Product> adapter = new ArrayAdapter<>(ViewProductActivity.this, android.R.layout.simple_list_item_1, productList.getData());
+                            ProductAdapter adapter = new ProductAdapter();
+                            adapter.setProductList(productList.getData());
                             lvProducts.setAdapter(adapter);
+
                             lvProducts.setOnItemClickListener((adapterView, view, i, l) -> {
                                 Product product = (Product) lvProducts.getItemAtPosition(i);
                                 Intent intent = new Intent(ViewProductActivity.this, DetailProductActivity.class);
                                 intent.putExtra("product", product);
                                 startActivity(intent);
                             });
+
                             lvProducts.setOnItemLongClickListener((adapterView, view, i, l) -> {
                                 Product product = (Product) lvProducts.getItemAtPosition(i);
                                 Intent intent = new Intent(ViewProductActivity.this, DeleteProductActivity.class);
