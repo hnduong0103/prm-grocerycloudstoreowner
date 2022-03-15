@@ -29,25 +29,20 @@
         android:text="@string/dashboard_product_button"
         android:onClick="clickToViewProducts"/>
 
-    <Button
-        android:id="@+id/btLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/dashboard_login_button"
-        android:onClick="clickToGoToLogin"/>
+
 
     <Button
         android:id="@+id/btReceipt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/dashboard_receipt_button"
+        android:text="đơn nhập hàng"
         android:onClick="clickToGoToReceipt"/>
 
     <Button
         android:id="@+id/btInventory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Inventory"
+        android:text="kho hàng"
         android:onClick="clickToGoToInventory"/>
        <Button
         android:id="@+id/btCashier"
@@ -55,5 +50,16 @@
         android:layout_height="wrap_content"
         android:text="@string/dashboard_cashier_button"
         android:onClick="clickToViewCashiers"/>
-
+    <Button
+        android:id="@+id/btEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sự kiện"
+        android:onClick="clickToViewEvent"/>
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="đăng xuất"
+        android:onClick="clickToGoToLogin"/>
 </LinearLayout>

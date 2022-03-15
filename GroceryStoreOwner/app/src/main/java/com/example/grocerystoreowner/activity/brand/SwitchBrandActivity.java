@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.grocerystoreowner.R;
 import com.example.grocerystoreowner.activity.event.EventListActivity;
+import com.example.grocerystoreowner.activity.main.MainActivity;
 import com.example.grocerystoreowner.model.brand.BrandResponse;
 import com.example.grocerystoreowner.service.BrandService;
 import com.example.grocerystoreowner.util.Constants;
@@ -64,7 +65,7 @@ public class SwitchBrandActivity extends AppCompatActivity {
                                         new Integer(brand.getId()).toString());
                                 SharedPreferenceUtil.putKey(sharedPreferences, Constants.BRAND_NAME_SHARED_PREFERENCE, brand.getName());
 
-                                Intent intent = new Intent(SwitchBrandActivity.this, EventListActivity.class);
+                                Intent intent = new Intent(SwitchBrandActivity.this, MainActivity.class);
                                 startActivity(intent);
                             }
                         });

@@ -2,7 +2,9 @@ package com.example.grocerystoreowner.activity.inventory;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -14,6 +16,7 @@ import com.example.grocerystoreowner.activity.bill.ViewBillActivity;
 import com.example.grocerystoreowner.model.product.StockData;
 import com.example.grocerystoreowner.model.product.StockResponse;
 import com.example.grocerystoreowner.service.StockService;
+import com.example.grocerystoreowner.util.Constants;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,10 +36,11 @@ public class ViewInventoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_inventory);
         gvInventory = findViewById(R.id.gvInventory);
-        int brandid = 1;
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.GROCERY_CLOUD_SHARED_PREFERENCE, Context.MODE_PRIVATE);
+        Integer brandId = Integer.parseInt(sharedPreferences.getString(Constants.BRAND_ID_SHARED_PREFERENCE,null));
         int storeid = 1;
         String searchTerm = "";
-        StockService.getApi().getStock(brandid, storeid, searchTerm, 100)
+        StockService.getApi().getStock(brandId, storeid, searchTerm, 100)
                 .enqueue(new Callback<StockResponse>() {
                     @Override
                     public void onResponse(Call<StockResponse> call, Response<StockResponse> response) {

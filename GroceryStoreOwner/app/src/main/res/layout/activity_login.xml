@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome to Cloud Grocery"
+            android:text="Chào mừng"
             android:textSize="25dp"
             android:gravity="center"
             >
@@ -24,21 +24,21 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="UserName"
+            android:hint="Tên đăng nhập"
             android:layout_marginBottom="20dp"
             android:id="@+id/username"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:hint="Password"
+            android:hint="Mật khẩu"
             android:id="@+id/password"
             android:inputType="textPassword"
             />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="Đăng nhập"
             android:background="#3f76ff"
             android:textColor="#fff"
             android:id="@+id/login"

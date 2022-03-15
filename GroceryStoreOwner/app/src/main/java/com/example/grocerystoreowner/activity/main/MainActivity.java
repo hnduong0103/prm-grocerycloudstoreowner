@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.example.grocerystoreowner.R;
 import com.example.grocerystoreowner.activity.bill.ViewBillActivity;
+import com.example.grocerystoreowner.activity.event.EventListActivity;
 import com.example.grocerystoreowner.activity.inventory.ViewInventoryActivity;
 import com.example.grocerystoreowner.activity.cashier.ViewCashierActivity;
 import com.example.grocerystoreowner.activity.login.LoginActivity;
@@ -48,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void clickToViewCashiers(View view) {
         Intent intent = new Intent(this, ViewCashierActivity.class);
+        startActivity(intent);
+    }
+
+    public void clickToViewEvent(View view) {
+        Intent intent = new Intent(this, EventListActivity.class);
         startActivity(intent);
     }
 }

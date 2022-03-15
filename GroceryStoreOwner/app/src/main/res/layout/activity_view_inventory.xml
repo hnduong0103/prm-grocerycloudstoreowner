@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="INVENTORY"
+        android:text="Kho hàng"
         android:textSize="20dp"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -20,7 +20,7 @@
         android:id="@+id/btToPendingList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pending List"
+        android:text="Đơn nhập"
         android:layout_marginStart="250dp"
         android:gravity="center"
         android:onClick="clickToPendingList"/>
@@ -28,12 +28,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Product Name:"/>
+        android:text="Tên sản phẩm:"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/searchTerm"/>
+        android:id="@+id/searchTerm"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,13 +44,13 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Search"
+            android:text="Tìm"
             android:layout_marginEnd="50dp"
             android:onClick="clickSearch"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Reset"
+            android:text="Làm mới"
             android:onClick="clickReset"/>
     </LinearLayout>
 

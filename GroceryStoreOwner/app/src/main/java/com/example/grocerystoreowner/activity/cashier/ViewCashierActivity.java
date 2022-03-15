@@ -3,7 +3,9 @@ package com.example.grocerystoreowner.activity.cashier;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -15,6 +17,7 @@ import com.example.grocerystoreowner.adapter.CashierAdapter;
 import com.example.grocerystoreowner.model.cashier.Cashier;
 import com.example.grocerystoreowner.model.cashier.CashierResponse;
 import com.example.grocerystoreowner.service.CashierService;
+import com.example.grocerystoreowner.util.Constants;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -40,10 +43,12 @@ public class ViewCashierActivity extends AppCompatActivity {
     }
 
     public void fetchCashier(boolean isIncludeDisabledCashier) {
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.GROCERY_CLOUD_SHARED_PREFERENCE, Context.MODE_PRIVATE);
+        Integer brandId = Integer.parseInt(sharedPreferences.getString(Constants.BRAND_ID_SHARED_PREFERENCE,null));
         CashierService
                 .getApi()
                 // TODO: add brandID and storeID
-                .getCashierList(1, null, null, isIncludeDisabledCashier)
+                .getCashierList(brandId, null, null, isIncludeDisabledCashier)
                 .enqueue(new Callback<CashierResponse>() {
                     @Override
                     public void onResponse(@NonNull Call<CashierResponse> call, @NonNull Response<CashierResponse> response) {

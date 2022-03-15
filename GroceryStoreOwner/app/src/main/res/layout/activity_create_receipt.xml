@@ -15,16 +15,16 @@
             android:id="@+id/btBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Back to Inventory"
+            android:text="Quay về"
             android:gravity="center"
             android:onClick="clickToGoToInventory"/>
 
         <Button
             android:id="@+id/clickToCreateReceipt"
-            android:layout_marginStart="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create Receipt"/>
+            android:layout_marginStart="150dp"
+            android:text="Tạo đơn" />
     </LinearLayout>
 
     <LinearLayout
@@ -35,12 +35,12 @@
             android:layout_marginStart="230dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total: "/>
+            android:text="Tổng: "/>
         <TextView
             android:id="@+id/TotalCost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TotalCost"
+            android:text="Tông"
             android:textSize="18sp"
             android:textStyle="bold"/>
     </LinearLayout>
@@ -52,21 +52,21 @@
         <TextView
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Product"
+            android:text="Sản phẩm"
             android:textSize="18sp"
             android:textStyle="bold"/>
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:textAlignment="textEnd"
-            android:text="Quantity"
+            android:text="Số lượng"
             android:textSize="18sp"
             android:textStyle="bold"/>
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:textAlignment="textEnd"
-            android:text="Price"
+            android:text="Giá"
             android:textSize="18sp"
             android:textStyle="bold"/>
     </LinearLayout>

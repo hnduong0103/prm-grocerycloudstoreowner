@@ -15,7 +15,7 @@
         android:textStyle="bold"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:text="Choose a brand to continue" />
+        android:text="Chọn một thương hiệu: " />
 
     <ListView
         android:id="@+id/brandList"

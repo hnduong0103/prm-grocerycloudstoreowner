@@ -11,7 +11,7 @@
                 android:id="@+id/ProductName"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="ProductName"
+                android:text="Sản phẩm"
                 android:textSize="18sp"
                 android:textColor="@color/black" />
             <TextView
