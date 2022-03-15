@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GroceryStoreOwner"
         android:usesCleartextTraffic="true">
-        <activity
+        
+              <activity
             android:name=".activity.inventory.CreateReceiptActivity"
             android:exported="false" />
         <activity
@@ -22,6 +23,18 @@
             android:noHistory="true" />
         <activity
             android:name=".activity.inventory.ViewInventoryActivity"
+             android:exported="false" />
+            <activity
+            android:name=".activity.cashier.DeleteCashierActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.cashier.DetailCashierActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.cashier.ViewCashierActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.product.DeleteProductActivity"
             android:exported="false" />
         <activity
             android:name=".activity.receipt.ViewReceiptDetailActivity"
@@ -39,6 +52,12 @@
             android:name=".activity.event.EventDetailActivity"
             android:exported="true" />
         <activity
+            android:name=".activity.product.DetailProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.product.ViewProductActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.event.EventListActivity"
             android:exported="true" />
         <activity
@@ -50,10 +69,6 @@
         <activity
             android:name=".activity.login.LoginActivity"
             android:exported="true" />
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:exported="true"
-            android:label="@string/title_activity_login" />
         <activity
             android:name=".activity.bill.ViewBillActivity"
             android:exported="false" />

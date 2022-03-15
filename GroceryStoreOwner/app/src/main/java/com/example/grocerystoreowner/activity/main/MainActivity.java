@@ -9,8 +9,10 @@ import android.view.View;
 import com.example.grocerystoreowner.R;
 import com.example.grocerystoreowner.activity.bill.ViewBillActivity;
 import com.example.grocerystoreowner.activity.inventory.ViewInventoryActivity;
+import com.example.grocerystoreowner.activity.cashier.ViewCashierActivity;
 import com.example.grocerystoreowner.activity.login.LoginActivity;
 import com.example.grocerystoreowner.activity.receipt.ViewReceiptActivity;
+import com.example.grocerystoreowner.activity.product.ViewProductActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,6 +39,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void clickToGoToInventory(View view) {
         Intent intent = new Intent(this, ViewInventoryActivity.class);
+        startActivity(intent);
+        }
+    public void clickToViewProducts(View view) {
+        Intent intent = new Intent(this, ViewProductActivity.class);
+        startActivity(intent);
+    }
+
+    public void clickToViewCashiers(View view) {
+        Intent intent = new Intent(this, ViewCashierActivity.class);
         startActivity(intent);
     }
 }

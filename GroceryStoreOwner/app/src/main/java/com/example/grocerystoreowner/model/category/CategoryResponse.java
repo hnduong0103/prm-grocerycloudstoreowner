@@ -1,4 +1,4 @@
-package com.example.grocerystoreowner.model.event;
+package com.example.grocerystoreowner.model.category;
 
 import com.example.grocerystoreowner.model.common.Pagination;
 
@@ -13,6 +13,6 @@ import lombok.Setter;
 @Data
 @Getter
 @Setter
-public class EventResponseList  extends Pagination {
-    private List<EventResponse> data;
+public class CategoryResponse extends Pagination {
+    private List<Category> data;
 }
