@@ -38,15 +38,4 @@ public class Product implements Serializable {
         this.status = status;
         this.sku = sku;
     }
-
-    @NonNull
-    @Override
-    public String toString() {
-        return "Mã sản phẩm: " + sku + '\n' +
-                "Tên sản phẩm: " + name + '\n' +
-                "Danh mục: " + categoryName + '\n' +
-                "Giá bán: " + sellPrice + '\n' +
-                "Đơn vị tính: " + unitLabel + '\n' +
-                "Trạng thái: " + Constants.PRODUCT_STATUS[status] + '\n';
-    }
 }

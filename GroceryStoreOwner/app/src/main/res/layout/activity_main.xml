@@ -40,7 +40,14 @@
         android:id="@+id/btReceipt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/dashboard_receipt_button"/>
+        android:text="@string/dashboard_receipt_button"
         android:onClick="clickToGoToReceipt"/>
+
+    <Button
+        android:id="@+id/btCashier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dashboard_cashier_button"
+        android:onClick="clickToViewCashiers"/>
 
 </LinearLayout>

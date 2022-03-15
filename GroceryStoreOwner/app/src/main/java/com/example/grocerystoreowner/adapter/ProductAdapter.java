@@ -1,21 +1,18 @@
 package com.example.grocerystoreowner.adapter;
 
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 
 import com.example.grocerystoreowner.R;
-import com.example.grocerystoreowner.activity.bill.ViewBillDetailActivity;
-import com.example.grocerystoreowner.model.bill.BillData;
 import com.example.grocerystoreowner.model.product.Product;
 import com.example.grocerystoreowner.util.Constants;
-import com.google.gson.Gson;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.List;
 
 public class ProductAdapter extends BaseAdapter implements ListAdapter {
@@ -59,10 +56,13 @@ public class ProductAdapter extends BaseAdapter implements ListAdapter {
 
         Product product = _productList.get(i);
 
+        DecimalFormat decimalFormat = new DecimalFormat("###,###,###đ");
+        decimalFormat.setGroupingSize(3);
+
         name.setText(product.getName());
         sku.setText(product.getSku());
         category.setText(product.getCategoryName());
-        sellPrice.setText(String.valueOf(product.getSellPrice()));
+        sellPrice.setText(decimalFormat.format(product.getSellPrice()));
         unitLabel.setText(String.valueOf(product.getUnitLabel()));
         status.setText(Constants.PRODUCT_STATUS[product.getStatus()]);
 

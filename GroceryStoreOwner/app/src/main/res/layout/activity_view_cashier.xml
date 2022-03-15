@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.cashier.ViewCashierActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/cashier_list_title"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10sp">
+
+        <CheckBox
+            android:id="@+id/cbx_include_disabled_cashier"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:text="@string/cashier_list_checkbox" />
+
+        <Button
+            android:id="@+id/btn_create_cashier"
+            android:layout_width="40sp"
+            android:layout_height="54sp"
+            android:text="@string/cashier_list_create_button" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_cashiers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -26,7 +26,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/product_list_search_hint"
-            android:textSize="16sp" />
+            android:textColorHint="#757575"
+            android:textSize="16sp"
+            tools:ignore="TouchTargetSizeCheck" />
 
 <!--        <Spinner-->
 <!--            android:id="@+id/categories_spinner"-->
@@ -40,7 +42,7 @@
 
         <Button
             android:id="@+id/btn_search_products"
-            android:layout_width="330dp"
+            android:layout_width="240dp"
             android:layout_height="54dp"
             android:layout_marginHorizontal="10dp"
             android:text="@string/product_list_search_button" />
@@ -57,5 +59,6 @@
     <ListView
         android:id="@+id/lv_products"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10sp"/>
 </LinearLayout>

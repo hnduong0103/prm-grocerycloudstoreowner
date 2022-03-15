@@ -6,68 +6,50 @@
     android:orientation="horizontal">
 
     <LinearLayout
-        android:layout_width="220dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/product_item_name"
+            android:id="@+id/cashier_item_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/product_item_name"
+            android:text="@string/cashier_item_name"
             android:textColor="#873c1e"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/product_item_sku"
+            android:id="@+id/cashier_item_store"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/product_item_sku"
-            android:textColor="#a06b39"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/product_item_category"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/product_item_category"
+            android:text="@string/cashier_item_store"
             android:textColor="#c97f5d"
             android:textSize="12sp"
             android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="130dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="230dp"
+        android:layout_marginStart="210dp"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/product_item_sell_price"
+            android:id="@+id/cashier_item_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/product_item_sell_price"
-            android:textColor="#025b0e"
-            android:textSize="13sp"
+            android:text="@string/cashier_item_username"
+            android:textColor="#627E66"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/product_item_unit_label"
+            android:id="@+id/cashier_item_status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/product_item_unit_label"
+            android:text="@string/cashier_item_status"
             android:textColor="#586640"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/product_item_status"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/product_item_status"
-            android:textColor="#9db802"
             android:textSize="12sp"
             android:textStyle="bold" />
     </LinearLayout>

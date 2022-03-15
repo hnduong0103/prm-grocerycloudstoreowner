@@ -11,4 +11,9 @@ public class Constants {
             "Ngừng bán",
             "Sắp hết hàng"
     };
+
+    public static final String[] CASHIER_STATUS = {
+            "Đang hoạt động",
+            "Đã nghỉ việc"
+    };
 }

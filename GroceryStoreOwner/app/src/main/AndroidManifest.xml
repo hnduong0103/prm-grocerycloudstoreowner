@@ -13,6 +13,15 @@
         android:theme="@style/Theme.GroceryStoreOwner"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activity.cashier.DeleteCashierActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.cashier.DetailCashierActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.cashier.ViewCashierActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.product.DeleteProductActivity"
             android:exported="false" />
         <activity

@@ -16,15 +16,19 @@
         <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/receipt_detail_grid_item.xml" value="0.25416666666666665" />
         <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/receipt_grid_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_brand.xml" value="0.1" />
+        <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_delete_cashier.xml" value="0.2" />
         <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_delete_product.xml" value="0.33" />
+        <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_detail_cashier.xml" value="0.33" />
         <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_detail_product.xml" value="0.33" />
         <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_event_list.xml" value="0.1" />
         <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_login.xml" value="0.33" />
-        <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_switch_brand.xml" value="0.1" />
         <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_view_bill.xml" value="0.25" />
-        <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_view_product.xml" value="0.29914529914529914" />
+        <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_view_cashier.xml" value="0.33" />
+        <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_view_product.xml" value="0.33" />
         <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/bill_grid_item.xml" value="0.33" />
+        <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/cashier_list_item.xml" value="0.25" />
         <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/event_grid_item.xml" value="0.33" />
         <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/product_list_item.xml" value="0.5" />
         <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/receipt_detail_grid_item.xml" value="0.33" />

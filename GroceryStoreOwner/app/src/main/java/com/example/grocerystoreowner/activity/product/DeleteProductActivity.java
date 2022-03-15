@@ -20,8 +20,6 @@ import retrofit2.Response;
 
 public class DeleteProductActivity extends AppCompatActivity {
 
-    private TextView txtSku, txtName, txtCategory, txtSellPrice, txtUnpackedProduct,
-            txtConversionRate, txtUnitLabel, txtLowerThreshold, txtStatus;
     private Product product;
 
     @Override
@@ -29,15 +27,15 @@ public class DeleteProductActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete_product);
 
-        txtSku = findViewById(R.id.txt_product_sku);
-        txtName = findViewById(R.id.txt_product_name);
-        txtCategory = findViewById(R.id.txt_product_category);
-        txtSellPrice = findViewById(R.id.txt_product_sell_price);
-        txtUnpackedProduct = findViewById(R.id.txt_product_unpacked_product);
-        txtConversionRate = findViewById(R.id.txt_product_conversion_rate);
-        txtUnitLabel = findViewById(R.id.txt_product_unit_label);
-        txtLowerThreshold = findViewById(R.id.txt_product_lower_threshold);
-        txtStatus = findViewById(R.id.txt_product_status);
+        TextView txtSku = findViewById(R.id.txt_product_sku);
+        TextView txtName = findViewById(R.id.txt_product_name);
+        TextView txtCategory = findViewById(R.id.txt_product_category);
+        TextView txtSellPrice = findViewById(R.id.txt_product_sell_price);
+        TextView txtUnpackedProduct = findViewById(R.id.txt_product_unpacked_product);
+        TextView txtConversionRate = findViewById(R.id.txt_product_conversion_rate);
+        TextView txtUnitLabel = findViewById(R.id.txt_product_unit_label);
+        TextView txtLowerThreshold = findViewById(R.id.txt_product_lower_threshold);
+        TextView txtStatus = findViewById(R.id.txt_product_status);
 
         Intent intent = this.getIntent();
         product = (Product) intent.getSerializableExtra("product");
