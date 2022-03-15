@@ -30,6 +30,7 @@
             android:id="@+id/btn_create_cashier"
             android:layout_width="40sp"
             android:layout_height="54sp"
+            android:backgroundTint="#10B1CD"
             android:text="@string/cashier_list_create_button" />
 
     </LinearLayout>

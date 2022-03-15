@@ -19,7 +19,7 @@
     <string name="dashboard_login_button">Đăng nhập</string>
     <string name="dashboard_receipt_button">Nhập hàng</string>
     <string name="dashboard_cashier_button">Nhân viên</string>
-    <string name="product_update_title">Cập nhật thông tin sản phẩm</string>
+    <string name="product_update_title">Thông tin sản phẩm</string>
     <string name="product_update_confirm">Xác nhận</string>
     <string name="product_update_cancel">Hủy</string>
     <string name="product_update_sku">Mã sản phẩm:</string>
@@ -52,6 +52,6 @@
     <string name="cashier_update_status">Trạng thái:</string>
     <string name="cashier_update_cancel">Hủy</string>
     <string name="cashier_update_confirm">Xác nhận</string>
-    <string name="cashier_update_title">Cập nhật thông tin nhân viên</string>
+    <string name="cashier_update_title">Thông tin nhân viên</string>
     <string name="cashier_update_password">Mật khẩu</string>
 </resources>
