@@ -3,7 +3,9 @@ package com.example.grocerystoreowner.activity.product;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -22,6 +24,7 @@ import com.example.grocerystoreowner.model.product.Product;
 import com.example.grocerystoreowner.model.product.ProductResponse;
 import com.example.grocerystoreowner.service.CategoryService;
 import com.example.grocerystoreowner.service.ProductService;
+import com.example.grocerystoreowner.util.Constants;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -87,10 +90,11 @@ public class ViewProductActivity extends AppCompatActivity {
         }
 
         String searchTerm = edtSearchTerm.getText().toString();
-        // TODO: add brand ID
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.GROCERY_CLOUD_SHARED_PREFERENCE, Context.MODE_PRIVATE);
+        int brandId = Integer.parseInt(sharedPreferences.getString(Constants.BRAND_ID_SHARED_PREFERENCE,null));
         ProductService
                 .getApi()
-                .getProductList(1, searchTerm, categoryId, false, 1, 10000)
+                .getProductList(brandId, searchTerm, categoryId, false, 1, 10000)
                 .enqueue(new Callback<ProductResponse>() {
                     @Override
                     public void onResponse(@NonNull Call<ProductResponse> call, @NonNull Response<ProductResponse> response) {
@@ -130,10 +134,11 @@ public class ViewProductActivity extends AppCompatActivity {
     }
 
     public void fetchCategoryList() {
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.GROCERY_CLOUD_SHARED_PREFERENCE, Context.MODE_PRIVATE);
+        int brandId = Integer.parseInt(sharedPreferences.getString(Constants.BRAND_ID_SHARED_PREFERENCE,null));
         CategoryService
                 .getApi()
-                // TODO: add brand ID
-                .getCategoryList(1, 1, 10000)
+                .getCategoryList(brandId, 1, 10000)
                 .enqueue(new Callback<CategoryResponse>() {
                     @Override
                     public void onResponse(@NonNull Call<CategoryResponse> call, @NonNull Response<CategoryResponse> response) {

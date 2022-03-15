@@ -3,7 +3,9 @@ package com.example.grocerystoreowner.activity.cashier;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.InputType;
 import android.widget.ArrayAdapter;
@@ -17,6 +19,7 @@ import com.example.grocerystoreowner.model.store.Store;
 import com.example.grocerystoreowner.model.cashier.Cashier;
 import com.example.grocerystoreowner.service.CashierService;
 import com.example.grocerystoreowner.service.StoreService;
+import com.example.grocerystoreowner.util.Constants;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -127,10 +130,11 @@ public class DetailCashierActivity extends AppCompatActivity {
     }
 
     public void fetchStoreList() {
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.GROCERY_CLOUD_SHARED_PREFERENCE, Context.MODE_PRIVATE);
+        int brandId = Integer.parseInt(sharedPreferences.getString(Constants.BRAND_ID_SHARED_PREFERENCE,null));
         StoreService
                 .getApi()
-                // TODO: add brand ID
-                .getStoreList(1)
+                .getStoreList(brandId)
                 .enqueue(new Callback<List<Store>>() {
                     @Override
                     public void onResponse(@NonNull Call<List<Store>> call, @NonNull Response<List<Store>> response) {

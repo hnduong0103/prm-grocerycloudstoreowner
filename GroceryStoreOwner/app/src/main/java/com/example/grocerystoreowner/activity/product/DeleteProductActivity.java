@@ -3,7 +3,9 @@ package com.example.grocerystoreowner.activity.product;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -58,10 +60,11 @@ public class DeleteProductActivity extends AppCompatActivity {
     }
 
     public void clickToDelete() {
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.GROCERY_CLOUD_SHARED_PREFERENCE, Context.MODE_PRIVATE);
+        int brandId = Integer.parseInt(sharedPreferences.getString(Constants.BRAND_ID_SHARED_PREFERENCE,null));
         ProductService
                 .getApi()
-                // TODO: add brand ID
-                .deleteProduct(product.getId(), 1)
+                .deleteProduct(product.getId(), brandId)
                 .enqueue(new Callback<Void>() {
                     @Override
                     public void onResponse(@NonNull Call<Void> call, @NonNull Response<Void> response) {

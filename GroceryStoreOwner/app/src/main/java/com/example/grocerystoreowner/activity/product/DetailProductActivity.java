@@ -3,7 +3,9 @@ package com.example.grocerystoreowner.activity.product;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -142,13 +144,13 @@ public class DetailProductActivity extends AppCompatActivity {
         );
 
         Call<Void> api;
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.GROCERY_CLOUD_SHARED_PREFERENCE, Context.MODE_PRIVATE);
+        int brandId = Integer.parseInt(sharedPreferences.getString(Constants.BRAND_ID_SHARED_PREFERENCE,null));
 
         if (product == null) {
-            // TODO: add brandID
-            api = ProductService.getApi().createProduct(1, newProduct);
+            api = ProductService.getApi().createProduct(brandId, newProduct);
         } else {
-            // TODO: add brandID
-            api = ProductService.getApi().updateProduct(product.getId(), 1, newProduct);
+            api = ProductService.getApi().updateProduct(product.getId(), brandId, newProduct);
         }
 
         api.enqueue(new Callback<Void>() {
@@ -172,10 +174,11 @@ public class DetailProductActivity extends AppCompatActivity {
     }
 
     public void fetchCategoryList() {
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.GROCERY_CLOUD_SHARED_PREFERENCE, Context.MODE_PRIVATE);
+        int brandId = Integer.parseInt(sharedPreferences.getString(Constants.BRAND_ID_SHARED_PREFERENCE,null));
         CategoryService
                 .getApi()
-                // TODO: add brand ID
-                .getCategoryList(1, 1, 10000)
+                .getCategoryList(brandId, 1, 10000)
                 .enqueue(new Callback<CategoryResponse>() {
                     @Override
                     public void onResponse(@NonNull Call<CategoryResponse> call, @NonNull Response<CategoryResponse> response) {
@@ -199,10 +202,11 @@ public class DetailProductActivity extends AppCompatActivity {
     }
 
     public void fetchProductList() {
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.GROCERY_CLOUD_SHARED_PREFERENCE, Context.MODE_PRIVATE);
+        int brandId = Integer.parseInt(sharedPreferences.getString(Constants.BRAND_ID_SHARED_PREFERENCE,null));
         ProductService
                 .getApi()
-                // TODO: add brand ID
-                .getProductList(1, null, null, false, 1, 10000)
+                .getProductList(brandId, null, null, false, 1, 10000)
                 .enqueue(new Callback<ProductResponse>() {
                     @Override
                     public void onResponse(@NonNull Call<ProductResponse> call, @NonNull Response<ProductResponse> response) {

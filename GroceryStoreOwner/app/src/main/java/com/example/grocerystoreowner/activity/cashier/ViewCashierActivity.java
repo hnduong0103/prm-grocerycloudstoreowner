@@ -44,10 +44,9 @@ public class ViewCashierActivity extends AppCompatActivity {
 
     public void fetchCashier(boolean isIncludeDisabledCashier) {
         SharedPreferences sharedPreferences = getSharedPreferences(Constants.GROCERY_CLOUD_SHARED_PREFERENCE, Context.MODE_PRIVATE);
-        Integer brandId = Integer.parseInt(sharedPreferences.getString(Constants.BRAND_ID_SHARED_PREFERENCE,null));
+        int brandId = Integer.parseInt(sharedPreferences.getString(Constants.BRAND_ID_SHARED_PREFERENCE, null));
         CashierService
                 .getApi()
-                // TODO: add brandID and storeID
                 .getCashierList(brandId, null, null, isIncludeDisabledCashier)
                 .enqueue(new Callback<CashierResponse>() {
                     @Override
