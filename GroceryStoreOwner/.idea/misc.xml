@@ -3,18 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/activity_create_receipt.xml" value="0.25416666666666665" />
         <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/activity_event_list.xml" value="0.25416666666666665" />
         <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/activity_switch_brand.xml" value="0.21875" />
         <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/activity_view_bill.xml" value="0.25416666666666665" />
         <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/activity_view_bill_detail.xml" value="0.21875" />
         <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/activity_view_inventory.xml" value="0.25416666666666665" />
+        <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/activity_view_pending_list.xml" value="0.25416666666666665" />
         <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/activity_view_receipt.xml" value="0.25416666666666665" />
         <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/activity_view_receipt_detail.xml" value="0.25416666666666665" />
         <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/bill_detail_grid_item.xml" value="0.264" />
         <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/bill_grid_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/create_receipt_grid_item.xml" value="0.25416666666666665" />
         <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/event_grid_item.xml" value="0.264" />
         <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/inventory_grid_item.xml" value="0.2" />
+        <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/pending_grid_item.xml" value="0.25416666666666665" />
         <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/receipt_detail_grid_item.xml" value="0.25416666666666665" />
         <entry key="..\:/FPT SPRING 2022/PRM392/GroceryCloudStoreOwner/GroceryStoreOwner/app/src/main/res/layout/receipt_grid_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/DELL/source/repos/prm-grocerycloudstoreowner/GroceryStoreOwner/app/src/main/res/layout/activity_main.xml" value="0.1" />

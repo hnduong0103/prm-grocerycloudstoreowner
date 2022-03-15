@@ -2,6 +2,7 @@ package com.example.grocerystoreowner.activity.inventory;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -9,6 +10,7 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import com.example.grocerystoreowner.R;
+import com.example.grocerystoreowner.activity.bill.ViewBillActivity;
 import com.example.grocerystoreowner.model.product.StockData;
 import com.example.grocerystoreowner.model.product.StockResponse;
 import com.example.grocerystoreowner.service.StockService;
@@ -76,5 +78,10 @@ public class ViewInventoryActivity extends AppCompatActivity {
                     }
                 });
 
+    }
+
+    public void clickToPendingList(View view) {
+        Intent intent = new Intent(this, ViewPendingList.class);
+        startActivity(intent);
     }
 }
